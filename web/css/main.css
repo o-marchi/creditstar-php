@@ -1,0 +1,23 @@
+body {
+  background: #FFFFFF;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.main-header .top-info {
+  background: #000000;
+  color: #FFFFFF;
+  height: 37px;
+}
+
+.main-header .navbar {
+  border-radius: 0;
+}
+
+.main-header .navbar-default {
+  background: #FFFFFF;
+}
+
+body {
+  background: pink;
+}
+/*# sourceMappingURL=main.css.map */

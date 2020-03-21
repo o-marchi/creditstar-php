@@ -1,4 +1,13 @@
-#Test exercise for Creditstar Group
+
+# My test observations
+
+Hello there.
+Thanks for letting me build this project for you. I hope you like it.
+
+The layout on this project is a simple `png` file. So I took the liberty to replicate it on Figma, [click here](https://www.figma.com/file/6XtMVDtx5PAjMHFh8hzMr5/Creditstar-Recruitment-Test?node-id=0%3A1) to check it out.
+
+
+# Test exercise for Creditstar Group
 
 As a very first shortlisting procedure of candidates, we have set up a test exercise that the interested applicants are executing.  
 

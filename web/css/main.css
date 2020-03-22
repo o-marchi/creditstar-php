@@ -3,10 +3,94 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
+.btn {
+  border-radius: 50px;
+  border: 2px solid #FFFFFF;
+  background-color: #FDBF3D;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FDBF3D), to(#F68437));
+  background-image: linear-gradient(180deg, #FDBF3D 0%, #F68437 100%);
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  color: #FFFFFF;
+  font-weight: bold;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-image .5s;
+  transition: background-image .5s;
+}
+
+.btn:hover {
+  background-image: none;
+  color: #FFFFFF;
+}
+
+.btn.-small {
+  padding: 3px 12px;
+  letter-spacing: -0.05em;
+}
+
+.btn.-red {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FB2930), to(#B0060F));
+  background: linear-gradient(180deg, #FB2930 0%, #B0060F 100%);
+}
+
+.btn svg {
+  margin-right: 7px;
+}
+
 .main-header .top-info {
   background: #000000;
   color: #FFFFFF;
   height: 37px;
+}
+
+.main-header .top-info > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.main-header .top-info > .container > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-header .top-info p {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.main-header .top-info .item {
+  margin-left: 25px;
+}
+
+.main-header .top-info .item span {
+  font-size: 13px;
+}
+
+.main-header .top-info .item svg {
+  margin-right: 5px;
 }
 
 .main-header .navbar {

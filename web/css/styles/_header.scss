@@ -1,9 +1,40 @@
 .main-header {
 
+
     .top-info {
         background: $black;
         color: $white;
         height: 37px;
+
+        & > .container {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+
+            & > div {
+                display: flex;
+                height: 100%;
+                align-items: center;
+            }
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .item {
+
+            margin-left: 25px;
+
+            span {
+                font-size: 13px;
+            }
+
+            svg {
+                margin-right: 5px;
+            }
+        }
     }
 
     .navbar {

@@ -9,10 +9,13 @@ use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
+
 <?php $this->beginPage() ?>
+
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
@@ -30,7 +33,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <header class="main-header">
-    <div class="top-info d-none d-lg-block">
+    <div class="top-info d-none d-sm-block">
         <div class="container">
             <div>
                 <p>Klienditeenindus</p>
@@ -59,7 +62,7 @@ AppAsset::register($this);
             <div>
 
                 <?php if (Yii::$app->user->isGuest) : ?>
-                    <a class="btn -small" href="/site/login">
+                    <a class="btn -small" href="<?= Url::toRoute(['site/login']) ?>">
                         <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="2" height="5" fill="white"/>
                             <rect x="2" width="3" height="2" fill="white"/>
@@ -86,33 +89,55 @@ AppAsset::register($this);
         </div>
     </div>
 
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'Creditstar',
-        'brandUrl' => Yii::$app->homeUrl,
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
-        ],
-    ]);
-    NavBar::end();
-    ?>
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+
+            <a class="navbar-brand" href="<?= Url::home() ?>">
+                <?= Html::img('@web/images/creditstar.png') ?>
+            </a>
+
+            <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#w0-collapse" aria-controls="w0-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="w0-collapse" class="navbar-collapse collapse" style="">
+                <ul id="w1" class="navbar-nav navbar-right nav">
+
+                    <?php
+                    $creditstar_links = [
+                        'About Us' => 'https://www.creditstar.com/about',
+                        'Core Values' => 'https://www.creditstar.com/about',
+                        'Carrers' => 'https://www.creditstar.com/carrers'
+                    ];
+                    ?>
+
+                    <?php foreach($creditstar_links as $label => $link): ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $link ?>" target="_blank">
+                            <span><?= $label ?></span>
+
+                            <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L3.5 4L1 7" stroke="#FDA157" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+
+            <div>
+                <p>Russian</p>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="sub-nav">
+        <div class="container">
+            <a href="">My actions</a>
+            <a href="">Loans</a>
+            <a href="">Users</a>
+        </div>
+    </nav>
 </header>
 
 <?php $this->endBody() ?>

@@ -95,10 +95,68 @@ p {
 
 .main-header .navbar {
   border-radius: 0;
+  background: #FFFFFF;
+  height: 60px;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
-.main-header .navbar-default {
-  background: #FFFFFF;
+.main-header .navbar .navbar-collapse {
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
+  -ms-flex-preferred-size: unset;
+      flex-basis: unset;
+}
+
+.main-header .navbar .nav .nav-item a {
+  font-size: 16px;
+  color: #505050;
+  font-weight: bold;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  margin-right: 20px;
+}
+
+.main-header .navbar .nav .nav-item a:hover span {
+  margin-right: 12px;
+  color: #000000;
+}
+
+.main-header .navbar .nav .nav-item a span {
+  margin-right: 8px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.main-header .sub-nav {
+  height: 55px;
+  background: #EEEFEF;
+}
+
+.main-header .sub-nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 52px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.main-header .sub-nav a {
+  font-size: 14px;
+  color: #505050;
+  font-weight: bold;
+  margin-right: 30px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.main-header .sub-nav a:hover {
+  color: #000000;
+  text-decoration: none;
 }
 
 body {

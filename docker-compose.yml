@@ -19,16 +19,20 @@ services:
     image: postgres
     restart: always
     hostname: db
+    ports:
+      - '5432:5432'
     environment:
-      POSTGRES_DB: example
-      POSTGRES_USER: example
-      POSTGRES_PASSWORD: example
+      POSTGRES_DB: creditstar_db
+      POSTGRES_USER: creditstar
+      POSTGRES_PASSWORD: creditstar
 
   db_test:
     image: postgres
     restart: always
     hostname: db_test
+    ports:
+      - '6000:5432'
     environment:
-      POSTGRES_DB: example
-      POSTGRES_USER: example
-      POSTGRES_PASSWORD: example
+      POSTGRES_DB: creditstar_db_test
+      POSTGRES_USER: creditstar
+      POSTGRES_PASSWORD: creditstar

@@ -75,7 +75,6 @@
 
         .container {
             display: flex;
-            padding-left: 52px;
             align-items: center;
             height: 100%;
         }
@@ -84,7 +83,7 @@
             font-size: 14px;
             color: $dark-gray;
             font-weight: bold;
-            margin-right: 30px;
+            margin-left: 30px;
             transition: all .5s;
 
             &:hover {

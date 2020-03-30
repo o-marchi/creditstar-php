@@ -124,10 +124,6 @@ AppAsset::register($this);
                     <?php endforeach; ?>
                 </ul>
             </div>
-
-            <div>
-                <p>Russian</p>
-            </div>
         </div>
     </nav>
 
@@ -139,6 +135,11 @@ AppAsset::register($this);
         </div>
     </nav>
 </header>
+
+<div class="container">
+    <?= Alert::widget() ?>
+    <?= $content ?>
+</main>
 
 <?php $this->endBody() ?>
 </body>

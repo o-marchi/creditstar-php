@@ -1,8 +1,6 @@
 @import './styles/variables';
 @import './styles/general';
+@import './styles/buttons';
+@import './styles/table';
 @import './styles/header';
-
-
-body {
-    background: pink;
-}
+@import './styles/main-content';

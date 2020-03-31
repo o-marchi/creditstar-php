@@ -6,32 +6,28 @@ $this->title = 'Creditstar';
 ?>
 <main class="main-content">
 
-    <h1 class="title">Front-end style should be based on this page</h1>
+    <h1 class="title">All Users</h1>
+
+    <?=
+        \yii\widgets\LinkPager::widget([
+            'pagination' => $dataProvider->getPagination(),
+        ]);
+    ?>
 
     <table class="table">
         <thead>
             <tr>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Name</th>
+            <th scope="col">E-mail</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="color-light-red">
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <?php foreach($dataProvider->getModels() as $user) : ?>
+            <tr class="">
+                <td><?= $user->first_name . ' ' . $user->last_name ?></td>
+                <td><?= $user->email ?></td>
             </tr>
-            <tr class="color-orange">
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            </tr>
-            <tr>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 

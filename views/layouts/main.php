@@ -60,31 +60,6 @@ AppAsset::register($this);
                 </div>
             </div>
             <div>
-
-                <?php if (Yii::$app->user->isGuest) : ?>
-                    <a class="btn -small" href="<?= Url::toRoute(['site/login']) ?>">
-                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="2" height="5" fill="white"/>
-                            <rect x="2" width="3" height="2" fill="white"/>
-                            <rect x="6" y="8" width="5" height="1" fill="white"/>
-                            <rect x="5" width="2" height="5" fill="white"/>
-                            <mask id="path-5-inside-1" fill="white">
-                            <rect x="4" y="5" width="9" height="7" rx="1"/>
-                            </mask>
-                            <rect x="4" y="5" width="9" height="7" rx="1" stroke="white" stroke-width="4" mask="url(#path-5-inside-1)"/>
-                        </svg>
-                        <span>Login</span>
-                    </a>
-                <?php else : ?>
-                    <?=
-                    Html::beginForm(['/site/logout'], 'post')
-                    . Html::submitButton(
-                        'Logout (' . Yii::$app->user->identity->username . ')',
-                        ['class' => 'btn btn-link logout']
-                    )
-                    . Html::endForm()
-                    ?>
-                <?php endif; ?>
             </div>
         </div>
     </div>
